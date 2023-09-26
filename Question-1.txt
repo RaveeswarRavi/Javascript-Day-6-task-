@@ -1,0 +1,23 @@
+Question-1
+Solving problems using array functions on rest countries data 
+
+// Get all the countries from Asia continent/region using the Filter function
+const asianCountries = countries.filter(country => country.region === 'Asia');
+
+// Get all the countries with a population of less than 2 lakhs using the Filter function
+const countriesWithLessPopulation = countries.filter(country => country.population < 200000);
+
+// Print the following details: name, capital, flag using the forEach function
+countries.forEach(country => {
+  console.log(`Name: ${country.name}`);
+  console.log(`Capital: ${country.capital}`);
+  console.log(`Flag: ${country.flag}`);
+});
+
+// Print the total population of countries using the reduce function
+const totalPopulation = countries.reduce((total, country) => total + country.population, 0);
+console.log(`Total Population: ${totalPopulation}`);
+
+// Print the country which uses US Dollars as currency
+const countryWithUSD = countries.find(country => country.currencies.includes('USD'));
+console.log(`Country with USD: ${countryWithUSD.name}`);
